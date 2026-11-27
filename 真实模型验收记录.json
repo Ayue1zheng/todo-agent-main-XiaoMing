@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-27",
+  "model": "deepseek-flash",
+  "verification": "真实 DeepSeek API 与本地任务 API",
+  "passed": true,
+  "records": [
+    {
+      "step": 1,
+      "user": "帮我记一下买牛奶",
+      "reply": "已经帮你记下待办事项“买牛奶”了，你随时可以让我帮你查看清单或把它标记为完成。",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": false
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "user": "再记一条取快递",
+      "reply": "已经记好了，清单现在是这样：\n\n【待办】\n1. 买牛奶\n2. 取快递\n\n待办共 2 条。需要的话，我也可以帮你标记完成或删除任务。",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": false
+        },
+        {
+          "id": "503a2e2a-d9ce-418c-b021-e8d56dd2694b",
+          "title": "取快递",
+          "done": false
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "user": "我有哪些任务？",
+      "reply": "你的清单如下：\n\n【待办】\n1. 买牛奶\n2. 取快递\n\n待办共 2 条，暂无已完成事项。需要我帮你标记完成或删除吗？",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": false
+        },
+        {
+          "id": "503a2e2a-d9ce-418c-b021-e8d56dd2694b",
+          "title": "取快递",
+          "done": false
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "user": "牛奶买好了",
+      "reply": "已经把“买牛奶”标记为完成了，清单如下：\n\n【待办】\n1. 取快递\n\n【已完成】\n1. 买牛奶\n\n还剩待办 1 条。",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": true
+        },
+        {
+          "id": "503a2e2a-d9ce-418c-b021-e8d56dd2694b",
+          "title": "取快递",
+          "done": false
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "user": "取快递这条删掉吧",
+      "reply": "已删除“取快递”，清单现在如下：\n\n【待办】\n暂无任务\n\n【已完成】\n1. 买牛奶\n\n需要我再帮你记录新事项吗？",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": true
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "user": "再给我看看清单",
+      "reply": "当前清单如下：\n\n【待办】\n暂无任务\n\n【已完成】\n1. 买牛奶\n\n待办共 0 条。需要我帮你记录新事项吗？",
+      "tasks": [
+        {
+          "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+          "title": "买牛奶",
+          "done": true
+        }
+      ]
+    }
+  ],
+  "persistenceAfterRestart": {
+    "passed": true,
+    "environment": "删除本地 .env 后重启服务",
+    "tasks": [
+      {
+        "id": "713ba690-6ff5-440a-bc76-0ff23495894d",
+        "title": "买牛奶",
+        "done": true
+      }
+    ]
+  }
+}
